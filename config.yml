@@ -1,0 +1,21 @@
+#xremap config
+# .config/xremap/config.yml
+#run using
+# sudo xremap config.yml
+##########################
+# to run no sudo:
+# sudo gpasswd -a YOUR_USER input
+# echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/input.rules
+# xremap config.yml
+# BTN_LEFT
+# BTN_RIGHT
+# BTN_MIDDLE
+# BTN_SIDE
+# BTN_EXTRA
+#If you specify a map containing held and alone, you can use the key for two purposes. The key is considered alone if it's pressed and released within alone_timeout_millis (default: 1000) before any other key is pressed. Otherwise it's considered held.
+modmap:
+  - name: VLC
+    application:
+      only: vlc.vlc
+    remap:
+      BTN_MIDDLE: KEY_SPACE
